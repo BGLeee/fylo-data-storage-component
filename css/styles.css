@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  
+  color: var(--Grayish-Blue);
+}
+.attribution a {
+  color: white;
+}
+:root {
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --Dragable-Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Very-Dark-Blue);
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.background {
+  position: relative;
+}
+.main {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .card:first-child {
+  padding: 40px;
+  padding-right: 80px;
+  border-radius: 10px 5rem 10px 10px;
+  background-color: var(--Dark-Blue);
+  margin-bottom: 1rem;
+}
+
+.logo {
+  margin-bottom: 25px;
+}
+
+.iconcontainer {
+  display: flex;
+}
+.iconcontainer img {
+  background-color: var(--Very-Dark-Blue);
+  padding: 10px;
+  border-radius: 10px;
+  height: 39px;
+}
+.iconcontainer img:nth-child(2) {
+  margin: 0 19px;
+}
+.main .card:last-child {
+  background-color: var(--Dark-Blue);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+ul li {
+  list-style: none;
+}
+p {
+  color: rgb(204, 194, 194);
+}
+span {
+  color: var(--Pale-Blue);
+  font-weight: bold;
+}
+.scroll {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 1rem;
+}
+.slider {
+  outline: 10px;
+  appearance: none;
+  border-radius: 25px;
+  width: 100%;
+  height: 15px;
+  margin: 15px 0;
+  cursor: pointer;
+  position: relative;
+}
+.track {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  border-radius: 25px;
+  background-color: var(--Very-Dark-Blue);
+}
+.progress {
+  background: linear-gradient(50deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  width: 73%;
+  height: 10px;
+  border-radius: 25px;
+  margin: auto 0;
+  bottom: 3px;
+  left: 3px;
+  position: absolute;
+}
+.thumb {
+  background-color: white;
+  border-radius: 25px;
+  right: 25%;
+  top: 2px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+.small-card {
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.small-card ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.small-card ul li:first-child {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.small-card ul li:last-child {
+  opacity: 80%;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 10px;
+  padding-right: 15px;
+}
+
+@media (min-width: 650px) {
+  body {
+    align-items: center;
+  }
+  .background {
+    position: initial;
+    width: 100%;
+  }
+  .back {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .main {
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(100vh - 0.1px);
+  }
+  .main .card:first-child {
+    margin-bottom: 0;
+    padding-right: 8rem;
+  }
+  .main .card:last-child {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+    margin-left: 2rem;
+    width: 50%;
+  }
+
+  .thumb {
+    right: 26.8%;
+  }
+  .small-card {
+    position: absolute;
+    left: initial;
+    right: -40px;
+    top: -35px;
+    padding: 15px 5px 15px 20px;
+  }
+
+  .triangle {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-top: 25px solid white;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 0;  
+  
+  }
+}
