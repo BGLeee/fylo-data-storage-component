@@ -3,7 +3,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
-  
+
   color: var(--Grayish-Blue);
 }
 .attribution a {
@@ -40,8 +40,9 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
 .main .card:first-child {
-  padding: 40px;
+  padding: 31px;
   padding-right: 80px;
   border-radius: 10px 5rem 10px 10px;
   background-color: var(--Dark-Blue);
@@ -69,6 +70,7 @@ body {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
+  font-size: smaller;
 }
 ul li {
   list-style: none;
@@ -89,7 +91,7 @@ span {
 .slider {
   outline: 10px;
   appearance: none;
-  border-radius: 25px;
+  border-radius: 5px;
   width: 100%;
   height: 15px;
   margin: 15px 0;
@@ -101,7 +103,7 @@ span {
   width: 100%;
   height: 15px;
   border-radius: 25px;
-  background-color: var(--Very-Dark-Blue);
+  background-color: #151e49;
 }
 .progress {
   background: linear-gradient(50deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
@@ -123,7 +125,7 @@ span {
   height: 10px;
 }
 .small-card {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: absolute;
   border-radius: 10px;
   padding-top: 15px;
@@ -163,6 +165,7 @@ span {
   }
   .back {
     width: 100%;
+    height: 52%;
     position: absolute;
     bottom: 0;
   }
@@ -171,6 +174,10 @@ span {
     align-items: flex-end;
     width: 100%;
     height: calc(100vh - 0.1px);
+  }
+  .main .card {
+    position: relative;
+    top: 5rem;
   }
   .main .card:first-child {
     margin-bottom: 0;
@@ -181,9 +188,11 @@ span {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    padding-top: 2.2rem;
+    padding-bottom: 1rem;
     position: relative;
     margin-left: 2rem;
-    width: 50%;
+    width: 35%;
   }
 
   .thumb {
@@ -193,7 +202,7 @@ span {
     position: absolute;
     left: initial;
     right: -40px;
-    top: -35px;
+    top: -63px;
     padding: 15px 5px 15px 20px;
   }
 
@@ -209,7 +218,6 @@ span {
   }
   .attribution {
     position: absolute;
-    bottom: 0;  
-  
+    bottom: 0;
   }
 }
